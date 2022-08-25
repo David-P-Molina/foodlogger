@@ -1,4 +1,4 @@
-<section class="hero is-black is-small">
+<section class="hero is-link is-small">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <header class="navbar">
@@ -28,7 +28,11 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <p class="title">
-        Title
+        <% if content_for(:title) %>
+          <%= yield :title %>
+        <% else %>
+          Food Log
+        <% end %>
       </p>
       <p class="subtitle">
         Subtitle
