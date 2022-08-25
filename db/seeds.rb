@@ -26,8 +26,16 @@ meal_b.created_at = created_day_a
 meal_c.created_at = created_day_a
 meal_d.created_at = created_day_a
 
-
 meal_e.created_at = created_day_b
 meal_f.created_at = created_day_b
 meal_g.created_at = created_day_b
 meal_h.created_at = created_day_b
+meal_a.save
+meal_b.save
+meal_c.save
+meal_d.save
+meal_e.save
+meal_f.save
+meal_g.save
+meal_h.save
+
