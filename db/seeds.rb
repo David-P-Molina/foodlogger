@@ -5,16 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#Create Daily Meals
-meal_a = Entry.find_or_create_by(meal_type: "Breakfast", calories: 450, proteins: 55, carbohydrates: 66, fats: 82)
-meal_b = Entry.find_or_create_by(meal_type: "Lunch", calories: 300, proteins: 89, carbohydrates: 36, fats: 41)
-meal_c = Entry.find_or_create_by(meal_type: "Snack", calories: 80, proteins: 44, carbohydrates: 78, fats: 45)
-meal_d = Entry.find_or_create_by(meal_type: "Dinner", calories: 780, proteins: 74, carbohydrates: 90, fats: 73)
+#Create Basic Category
+category_1 = Category.find_or_create_by(title: "Weight Loss")
+category_2 = Category.find_or_create_by(title: "Bulking")
 
-meal_e = Entry.find_or_create_by(meal_type: "Breakfast", calories: 980, proteins: 53, carbohydrates: 85, fats: 45)
-meal_f = Entry.find_or_create_by(meal_type: "Lunch", calories: 450, proteins: 22, carbohydrates: 36, fats: 32)
-meal_g = Entry.find_or_create_by(meal_type: "Snack", calories: 120, proteins: 21, carbohydrates: 25, fats: 13)
-meal_h = Entry.find_or_create_by(meal_type: "Dinner", calories: 1245, proteins: 120, carbohydrates: 78, fats: 16)
+#Create Daily Meals
+meal_a = Entry.find_or_create_by(meal_type: "Breakfast", calories: 450, proteins: 55, carbohydrates: 66, fats: 82, category_id: category_1)
+meal_b = Entry.find_or_create_by(meal_type: "Lunch", calories: 300, proteins: 89, carbohydrates: 36, fats: 41, category_id: category_1)
+meal_c = Entry.find_or_create_by(meal_type: "Snack", calories: 80, proteins: 44, carbohydrates: 78, fats: 45, category_id: category_1)
+meal_d = Entry.find_or_create_by(meal_type: "Dinner", calories: 780, proteins: 74, carbohydrates: 90, fats: 73, category_id: category_1)
+
+meal_e = Entry.find_or_create_by(meal_type: "Breakfast", calories: 980, proteins: 53, carbohydrates: 85, fats: 45, category_id: category_2)
+meal_f = Entry.find_or_create_by(meal_type: "Lunch", calories: 450, proteins: 22, carbohydrates: 36, fats: 32, category_id: category_2)
+meal_g = Entry.find_or_create_by(meal_type: "Snack", calories: 120, proteins: 21, carbohydrates: 25, fats: 13, category_id: category_2)
+meal_h = Entry.find_or_create_by(meal_type: "Dinner", calories: 1245, proteins: 120, carbohydrates: 78, fats: 16, category_id: category_2)
 
 # Create variable for created_at
 created_day_a = (rand*10).days.ago
