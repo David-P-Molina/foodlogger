@@ -1,4 +1,6 @@
 class Entry < ApplicationRecord
+    belongs_to :category
+
     validates :calories, :proteins, :carbohydrates, :fats, :meal_type, presence: true
     validates :calories, :proteins, :carbohydrates, :fats, numericality: true
     
